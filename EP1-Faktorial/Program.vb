@@ -7,11 +7,16 @@ Module Program
 
         Console.WriteLine("Zadej celé èíslo: ")
         cislo = Console.ReadLine
+        If cislo < 0 Then
+            Console.WriteLine("Musíš zadat celé kladné èíslo")
+        Else For i = 1 To cislo
+                vypocet = vypocet * i
+            Next
+            Console.WriteLine($"Faktoriál {cislo} je {vypocet}")
+            Console.ReadKey()
+        End If
 
-        For i = 1 To cislo
-            vypocet = vypocet * i
-        Next
-        Console.WriteLine($"Faktoriál {cislo} je {vypocet}")
-        Console.ReadKey()
+
+
     End Sub
 End Module
