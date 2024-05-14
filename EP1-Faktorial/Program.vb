@@ -2,6 +2,16 @@ Imports System
 
 Module Program
   Sub Main(args As String())
-    Console.WriteLine("Hello World!")
-  End Sub
+        Dim cislo As Integer
+        Dim vypocet As Integer = 1
+
+        Console.WriteLine("Zadej celé èíslo: ")
+        cislo = Console.ReadLine
+
+        For i = 1 To cislo
+            vypocet = vypocet * i
+        Next
+        Console.WriteLine($"Faktoriál {cislo} je {vypocet}")
+        Console.ReadKey()
+    End Sub
 End Module
